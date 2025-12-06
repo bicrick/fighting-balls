@@ -580,6 +580,9 @@
       { team1: { name: 'slate', color: '#64748b' }, team2: { name: 'amber', color: '#f59e0b' } },
     ];
 
+    // Rare easter egg preset
+    const EASTER_EGG_PRESET = { team1: { name: 'poop', color: '#8B4513' }, team2: { name: 'pee', color: '#FFD700' } };
+
     // DOM Elements
     const gameScreen = document.getElementById('gameScreen');
     const winScreen = document.getElementById('winScreen');
@@ -636,9 +639,15 @@
 
     // Select random team preset
     function selectRandomTeam() {
-      const preset = TEAM_PRESETS[Math.floor(Math.random() * TEAM_PRESETS.length)];
-      team1 = { ...preset.team1 };
-      team2 = { ...preset.team2 };
+      // 1/100 chance for easter egg
+      if (Math.random() < 0.01) {
+        team1 = { ...EASTER_EGG_PRESET.team1 };
+        team2 = { ...EASTER_EGG_PRESET.team2 };
+      } else {
+        const preset = TEAM_PRESETS[Math.floor(Math.random() * TEAM_PRESETS.length)];
+        team1 = { ...preset.team1 };
+        team2 = { ...preset.team2 };
+      }
     }
 
     // Update progress bar
