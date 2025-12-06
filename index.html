@@ -163,8 +163,8 @@
       top: 0;
       bottom: 0;
       width: 3px;
-      background: rgba(100, 100, 100, 0.6);
-      box-shadow: 0 0 4px rgba(0,0,0,0.2);
+      background: white;
+      box-shadow: none;
     }
 
     .threshold-marker::before {
@@ -177,7 +177,7 @@
       height: 0;
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
-      border-top: 6px solid rgba(100, 100, 100, 0.6);
+      border-top: 6px solid white;
     }
 
     .threshold-marker::after {
@@ -190,7 +190,7 @@
       height: 0;
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
-      border-bottom: 6px solid rgba(100, 100, 100, 0.6);
+      border-bottom: 6px solid white;
     }
 
     .threshold-marker.left {
@@ -556,8 +556,8 @@
       <div class="settings-section">
         <label>Win Threshold</label>
         <div class="speed-row">
-          <input type="range" id="settingsThreshold" min="55" max="95" value="75">
-          <span class="speed-value" id="settingsThresholdValue">75%</span>
+          <input type="range" id="settingsThreshold" min="55" max="95" value="60">
+          <span class="speed-value" id="settingsThresholdValue">60%</span>
         </div>
       </div>
       <div class="settings-buttons">
@@ -627,7 +627,7 @@
     // Game State
     let team1 = { name: 'day', color: '#d4ddd6' };
     let team2 = { name: 'night', color: '#2d4a4a' };
-    let winThreshold = 75;
+    let winThreshold = 60;
     let ownership = [];
     let balls = [];
     let isPlaying = false;
