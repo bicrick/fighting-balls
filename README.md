@@ -1,6 +1,6 @@
 # Fighting Balls
 
-A copy of something I made on Twitter.
+A copy of something I found on Twitter.
 
 <div align="center">
   <img src="fighting-balls.gif" alt="Fighting Balls Game" width="600"/>
